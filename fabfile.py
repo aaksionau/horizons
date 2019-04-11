@@ -13,7 +13,4 @@ def deploy():
     with cd(f'{env.remote_app_dir}'):
         run('git pull origin master')
 
-    run(f'cd {env.remote_app_dir}; pipenv shell')
-    run(f'cd {env.remote_app_dir}; pipenv install')
-
     run(f'cd {env.remote_apache_dir}; touch wsgi.py;')
