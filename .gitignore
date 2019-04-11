@@ -3,3 +3,4 @@ __pycache__
 .env
 Pipfile.lock
 .vscode
+wsgi.py
