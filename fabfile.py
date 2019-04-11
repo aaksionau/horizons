@@ -4,7 +4,7 @@ from fabric.api import abort, cd, env, local, run, task
 env.use_ssh_config = True
 env.hosts = ["webfaction"]
 env.remote_app_dir = '/home/paloni/webapps/horizons/'
-env.remote_apache_dir = '/home/paloni/webapps/horizons/apache2/'
+env.remote_apache_dir = '/home/paloni/webapps/horizons/apache2/bin/'
 
 
 @task
@@ -15,4 +15,4 @@ def deploy():
         run('pipenv shell')
         run('pipenv install')
 
-    run(f'cd {env.remote_app_dir}/echb/echb/; touch wsgi.py;')
+    run(f'cd {env.remote_apache_dir}; touch wsgi.py;')
