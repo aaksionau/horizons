@@ -4,3 +4,4 @@ __pycache__
 Pipfile.lock
 .vscode
 wsgi.py
+fabfile.py
