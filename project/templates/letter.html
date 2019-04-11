@@ -1,0 +1,14 @@
+<p>Добрый день!</p>
+<p></p>
+<p>Пришла заявка с сайта http://horizons.co.ua/</p>
+<p></p>
+{% for field in data %}
+    {% if field.name != 'csrf_token' %}
+        <p>
+        <strong>{{field.label.text}}:</strong> 
+        <span>{{field.data}}</span>
+        </p>
+    {% endif %}
+{% endfor %}
+<p></p>
+<p>Всего вам доброго!</p>
