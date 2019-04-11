@@ -12,7 +12,7 @@ def deploy():
     local("git push origin HEAD")
     with cd(f'{env.remote_app_dir}'):
         run('git pull origin master')
-        run('pipenv shell')
+        run('/home/paloni/.local/share/virtualenvs/horizons-1jRzT3a9/bin/activate')
         run('pipenv install')
 
     run(f'cd {env.remote_apache_dir}; touch wsgi.py;')
